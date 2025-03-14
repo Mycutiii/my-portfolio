@@ -1,0 +1,41 @@
+import React from "react";
+
+export default function Portfolio() {
+  return (
+    <div className="min-h-screen bg-pink-100 flex items-center justify-center p-8">
+      <div className="bg-white shadow-lg rounded-2xl p-6 max-w-3xl w-full text-gray-800">
+        <div className="flex items-center gap-4">
+          <img
+            src="https://scontent.fhan3-2.fna.fbcdn.net/v/t39.30808-1/482348174_1232490558447337_5790816413761356786_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=107&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeGaEuNGrYwNAMiZtylrt06MMZOPRhoovhMxk49GGii-E5j6LAyg1XAiNLKEtifp5a66l5YutPas9wRQu-UPa94h&_nc_ohc=saXjJLiO7PYQ7kNvgHBQKOj&_nc_oc=AdgMAKtuC-nFOtkapobZSp2l_Y78OW42wU5iTFPdMJ07JLEcXA8yjcF5j_DBrdjin3c&_nc_zt=24&_nc_ht=scontent.fhan3-2.fna&_nc_gid=AqxZHT4R65kByZd0ZmsPltp&oh=00_AYG1j4TWSqu7sIoWwoD-PbumqIn_JaU0doRossr5sc_baw&oe=67D9C49E"
+            alt="Nguyễn Lê Trà My"
+            className="rounded-full border-4 border-pink-300"
+          />
+          <div>
+            <h1 className="text-2xl font-bold text-pink-600">Nguyễn Lê Trà My</h1>
+            <p className="text-gray-600">Sinh viên Thiết kế Đồ họa</p>
+          </div>
+        </div>
+        <div className="mt-6">
+          <h2 className="text-xl font-semibold text-gray-700">Giới thiệu</h2>
+          <p className="text-gray-600 mt-2">
+            Xin chào! Mình là Nguyễn Lê Trà My, một sinh viên đam mê thiết kế đồ họa với niềm yêu thích sáng tạo và mỹ thuật. Mình luôn tìm kiếm những ý tưởng mới và không ngừng học hỏi để phát triển kỹ năng.
+          </p>
+        </div>
+        <div className="mt-6">
+          <h2 className="text-xl font-semibold text-gray-700">Kỹ năng & Sở thích</h2>
+          <ul className="list-disc list-inside text-gray-600 mt-2">
+            <li>Thiết kế đồ họa với Adobe Photoshop & Illustrator</li>
+            <li>Vẽ minh họa kỹ thuật số và truyền thống</li>
+            <li>Thiết kế thương hiệu và UI/UX</li>
+            <li>Đọc sách, du lịch và khám phá nghệ thuật</li>
+          </ul>
+        </div>
+        <div className="mt-6">
+          <h2 className="text-xl font-semibold text-gray-700">Liên hệ</h2>
+          <p className="text-gray-600 mt-2">Email: tra.my@example.com</p>
+          <p className="text-gray-600">Behance: behance.net/tramy</p>
+        </div>
+      </div>
+    </div>
+  );
+}
