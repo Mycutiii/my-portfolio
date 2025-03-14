@@ -3,73 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nguyễn Lê Trà My - Portfolio</title>
+    <title>Giới thiệu - Nguyễn Lê Trà My</title>
     <style>
         body {
+            background-color: #1a1a1a; /* Màu đen nhạt */
+            color: #d3d3d3; /* Màu bạc nhạt */
             font-family: Arial, sans-serif;
-            background-color: #fce7f3;
+            margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px;
+            height: 100vh;
         }
         .container {
-            background: white;
-            padding: 20px;
+            background-color: #2b2b2b; /* Màu đen xám */
+            width: 600px;
+            padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            text-align: center;
-        }
-        .avatar {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 4px solid #f06292;
+            box-shadow: 0 0 15px rgba(211, 211, 211, 0.2); /* Hiệu ứng bóng bạc nhạt */
         }
         h1 {
-            color: #d81b60;
-            font-size: 24px;
+            color: #c0c0c0; /* Màu bạc */
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 20px;
         }
         p {
-            color: #555;
+            line-height: 1.6;
+            font-size: 16px;
+            text-align: justify;
         }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        ul li::before {
-            content: "• ";
-            color: #d81b60;
-        }
-        a {
-            color: #d81b60;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
+        .highlight {
+            color: #dcdcdc; /* Màu bạc sáng hơn để nhấn mạnh */
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="https://scontent.fhan3-2.fna.fbcdn.net/v/t39.30808-1/482348174_1232490558447337_5790816413761356786_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=107&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeGaEuNGrYwNAMiZtylrt06MMZOPRhoovhMxk49GGii-E5j6LAyg1XAiNLKEtifp5a66l5YutPas9wRQu-UPa94h&_nc_ohc=saXjJLiO7PYQ7kNvgHBQKOj&_nc_oc=AdgMAKtuC-nFOtkapobZSp2l_Y78OW42wU5iTFPdMJ07JLEcXA8yjcF5j_DBrdjin3c&_nc_zt=24&_nc_ht=scontent.fhan3-2.fna&_nc_gid=AqxZHT4R65kByZd0ZmsPltp&oh=00_AYG1j4TWSqu7sIoWwoD-PbumqIn_JaU0doRossr5sc_baw&oe=67D9C49E" alt="Nguyễn Lê Trà My" class="avatar">
-        <h1>Nguyễn Lê Trà My</h1>
-        <p>Sinh viên Thiết kế Đồ họa</p>
-        <h2>Giới thiệu</h2>
-        <p>Xin chào! Mình là Nguyễn Lê Trà My, một sinh viên đam mê thiết kế đồ họa với niềm yêu thích sáng tạo và mỹ thuật. Mình luôn tìm kiếm những ý tưởng mới và không ngừng học hỏi để phát triển kỹ năng.</p>
-        <h2>Kỹ năng & Sở thích</h2>
-        <ul>
-            <li>Thiết kế đồ họa với Adobe Photoshop & Illustrator</li>
-            <li>Vẽ minh họa kỹ thuật số và truyền thống</li>
-            <li>Thiết kế thương hiệu và UI/UX</li>
-            <li>Đọc sách, du lịch và khám phá nghệ thuật</li>
-        </ul>
-        <h2>Liên hệ</h2>
-        <p>📧 Email: tra.my@example.com</p>
-        <p>🎨 Behance: <a href="https://behance.net/tramy">behance.net/tramy</a></p>
+        <h1>Xin chào, mình là Nguyễn Lê Trà My</h1>
+        <p>
+            Mình là <span class="highlight">Nguyễn Lê Trà My</span> – một designer đầy đam mê và sáng tạo! 
+            Hiện tại, mình đang theo học <span class="highlight">Thiết kế Đồ họa tại ICTU</span> để phát triển sâu hơn trong lĩnh vực nghệ thuật. 
+            Mình luôn mong muốn trau dồi kỹ năng và khám phá những phong cách thiết kế mới mẻ.
+        </p>
+        <p>
+            Mình đặc biệt yêu thích minh họa phong cách <span class="highlight">cổ tích phương Tây</span> – những hình ảnh giàu màu sắc, sinh động và mang tính kể chuyện. 
+            Đây cũng là lý do mình chọn thiết kế bìa sách <span class="highlight">Cô bé quàng khăn đỏ</span> với hướng đi phá cách, thể hiện cá tính riêng.
+        </p>
+        <p>
+            Bên cạnh việc học trên trường, mình còn tự tìm hiểu và thực hành nhiều trên <span class="highlight">Photoshop</span> – một trong những công cụ quan trọng trong ngành. 
+            Mình đã ứng dụng phần mềm này vào các thiết kế bìa sách và nhiều sản phẩm cá nhân khác. 
+            Ngoài ra, mình cũng quan tâm đến <span class="highlight">UI/UX Design</span> và đang từng bước khám phá lĩnh vực này.
+        </p>
+        <p>
+            Dù đôi khi còn lo lắng về khả năng vẽ tay, nhưng mình không ngại thử thách. 
+            Mình luôn cố gắng học hỏi, rèn luyện mỗi ngày để phát triển bản thân và chinh phục những mục tiêu cao hơn trong ngành thiết kế.
+        </p>
+        <p>
+            Mình tin rằng, với sự kiên trì và tinh thần sáng tạo, mình sẽ tạo ra những tác phẩm ấn tượng và không ngừng tiến xa hơn trên con đường nghệ thuật!
+        </p>
     </div>
 </body>
 </html>
