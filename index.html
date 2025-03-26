@@ -1,27 +1,246 @@
-# 👋 Hello, I'm Nguyễn Lê Trà My (Mycutiii)
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang giới thiệu cá nhân</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-### 👩‍🎨 About Me
-I'm currently studying graphic design. I have a passion for drawing, designing, exploring new art styles, and creating unique concepts. I'm also interested in UI/UX and book design.
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            padding: 20px;
+            /* Màu nền galaxy pastel */
+            background: linear-gradient(135deg, #e0d6ff 0%, #b8c0ff 50%, #bbd0ff 100%);
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
 
-### 🎨 Interests
-- Drawing and designing
-- Exploring new art styles
-- Creating unique concepts
-- Learning about UI/UX
-- Designing books
+        /* Hiệu ứng sao lấp lánh pastel */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(2px 2px at 20px 30px, #d1c4e9, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 40px 70px, #d1c4e9, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 90px 40px, #d1c4e9, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 130px 80px, #d1c4e9, rgba(0,0,0,0));
+            background-size: 200px 200px;
+            animation: stars 50s linear infinite;
+            z-index: -1;
+            opacity: 0.6;
+        }
 
-### 📚 Projects
-- Designed the book cover for "Little Red Riding Hood" in a foreign fairy tale illustration style.
-- Created a guidebook on UI/UX.
-- Conceptualized art camps: "Stepping into Van Gogh's World" and "Ocean-themed Art Camp".
+        @keyframes stars {
+            from { transform: translateY(0); }
+            to { transform: translateY(-200px); }
+        }
 
-### 🛠 Skills
-- Proficient in using Photoshop for book cover design and image editing.
-- Knowledgeable in UI/UX and graphic design.
-- Organizational and management skills – currently serving as the class secretary.
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 
+                0 0 25px rgba(177, 156, 217, 0.3),
+                0 0 15px rgba(255, 255, 255, 0.8) inset;
+            backdrop-filter: blur(8px);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
 
-### 🌟 Other Information
-I aspire to retake the entrance exam for the University of Industrial Fine Arts to improve my drawing skills. I'm always looking for opportunities to develop myself in the field of design.
+        .container::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+            z-index: -1;
+        }
 
-### 📫 Connect with Me
-Feel free to reach out if you want to collaborate or just chat about design!
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #b39ddb;
+            display: block;
+            margin: 0 auto 15px;
+            box-shadow: 
+                0 0 15px rgba(179, 157, 219, 0.4),
+                0 0 0 5px rgba(255, 255, 255, 0.8);
+            transition: all 0.3s ease;
+        }
+
+        .avatar:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(179, 157, 219, 0.6);
+        }
+
+        h1 {
+            color: #7e57c2;
+            margin: 10px 0;
+            font-size: 28px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .tagline {
+            font-style: italic;
+            color: #7986cb;
+            font-size: 18px;
+        }
+
+        section {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            transition: all 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #9575cd;
+            border-bottom: 2px dashed #b39ddb;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        p, li {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        ul {
+            list-style-position: inside;
+            padding-left: 5px;
+        }
+
+        a {
+            color: #7e57c2;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        a:hover {
+            color: #5e35b1;
+            text-decoration: underline;
+        }
+
+        .social-links {
+            margin-top: 15px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            display: inline-block;
+            background: linear-gradient(45deg, #b39ddb, #9575cd);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            box-shadow: 0 3px 10px rgba(149, 117, 205, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: linear-gradient(45deg, #9575cd, #7e57c2);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(149, 117, 205, 0.4);
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+                border-radius: 15px;
+            }
+            
+            section {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            .avatar {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="C:/Users/84349/Downloads/avatar1.jpg" class="avatar">
+            <h1>Nguyễn Lê Trà My</h1>
+            <p class="tagline">Designer</p>
+        </header>
+
+        <section class="about">
+            <h2>Về tôi</h2>
+            <p>Mình đang theo học thiết kế đồ họa tại một trường đại học. Điều này cho thấy My có nền tảng về thiết kế và đang không ngừng nâng cao tay nghề.</p>
+            <p>✔ Kiến thức nền tảng về thiết kế đồ họa.<br>
+               ✔ Thành thạo Photoshop (có thể liệt kê thêm các phần mềm khác nếu My sử dụng).<br>
+               ✔ Tư duy sáng tạo, không ngại thử nghiệm phong cách mới.</p>
+        </section>
+
+        <section class="skills">
+            <h2>Kỹ năng</h2>
+            <ul>
+                <li>HTML5, CSS3, JavaScript (ES6+)</li>
+                <li>React.js, Node.js, Express</li>
+                <li>Thiết kế UI/UX với Figma</li>
+                <li>Làm việc với cơ sở dữ liệu MySQL, MongoDB</li>
+                <li>Sử dụng Git để quản lý phiên bản</li>
+            </ul>
+        </section>
+
+        <section class="contact">
+            <h2>Liên hệ</h2>
+            <p>📧 Email: <a href="mailto:0393652299my@gmail.com">0393652299my@gmail.com</a></p>
+            <p>📞 SĐT: 0392920728</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/my.xam.3388" target="_blank">Facebook</a>
+                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
