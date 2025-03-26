@@ -22,13 +22,12 @@
             background: linear-gradient(135deg, #e0d6ff 0%, #b8c0ff 50%, #bbd0ff 100%);
             min-height: 100vh;
             position: relative;
-            overflow: hidden;
         }
 
         /* Hiệu ứng sao lấp lánh pastel */
         body::before {
             content: "";
-            position: absolute;
+            position: fixed; /* Thay đổi từ absolute sang fixed */
             top: 0;
             left: 0;
             width: 100%;
@@ -51,7 +50,7 @@
 
         .container {
             max-width: 800px;
-            margin: 0 auto;
+            margin: 20px auto;
             background: rgba(255, 255, 255, 0.85);
             padding: 30px;
             border-radius: 20px;
@@ -60,19 +59,6 @@
                 0 0 15px rgba(255, 255, 255, 0.8) inset;
             backdrop-filter: blur(8px);
             border: 2px solid rgba(255, 255, 255, 0.5);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .container::before {
-            content: "";
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
-            z-index: -1;
         }
 
         header {
@@ -187,6 +173,7 @@
             .container {
                 padding: 15px;
                 border-radius: 15px;
+                margin: 10px auto;
             }
             
             section {
@@ -238,7 +225,6 @@
             <div class="social-links">
                 <a href="https://www.facebook.com/my.xam.3388" target="_blank">Facebook</a>
                 <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
             </div>
         </section>
     </div>
