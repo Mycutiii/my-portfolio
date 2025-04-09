@@ -698,27 +698,6 @@
                         </div>
                         
                         <button type="submit" class="submit-btn">Gửi tin nhắn</button>
-                        // Xử lý form liên hệ
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Validate checkbox
-    if (!document.getElementById('privacy').checked) {
-        alert('Vui lòng đồng ý với chính sách bảo mật');
-        return;
-    }
-    
-    // Lấy dữ liệu form
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    
-    // Hiển thị thông báo (tạm thời thay cho gửi email thực tế)
-    alert(`Cảm ơn ${name} đã liên hệ!\nTôi sẽ phản hồi qua email ${email} sớm nhất.\n\nNội dung: ${message}`);
-    
-    // Reset form
-    this.reset();
-});
                     </form>
                 </div>
             </div>
