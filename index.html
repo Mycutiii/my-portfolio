@@ -1,1 +1,659 @@
-https://13f13237-e252-4800-a0a2-8118a3724cf6-00-2fz44fbzhbs1w.worf.replit.dev/
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Lê Trà My - Graphic Designer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Thêm Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #CCCCCC;
+            padding: 20px;
+            background-color: #0F292F;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(2px 2px at 20px 30px, #14A098, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 40px 70px, #CB2D6F, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 90px 40px, #14A098, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 130px 80px, #CB2D6F, rgba(0,0,0,0));
+            background-size: 200px 200px;
+            animation: stars 50s linear infinite;
+            z-index: -1;
+            opacity: 0.6;
+        }
+
+        @keyframes stars {
+            from { transform: translateY(0); }
+            to { transform: translateY(-200px); }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(15, 41, 47, 0.85);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 
+                0 0 25px rgba(80, 31, 58, 0.5),
+                0 0 15px rgba(255, 255, 255, 0.1) inset;
+            backdrop-filter: blur(8px);
+            border: 2px solid #14A098;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #CB2D6F;
+            display: block;
+            margin: 0 auto 15px;
+            box-shadow: 
+                0 0 15px rgba(203, 45, 111, 0.4),
+                0 0 0 5px rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .avatar:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(203, 45, 111, 0.6);
+        }
+
+        h1 {
+            color: #14A098;
+            margin: 10px 0;
+            font-size: 28px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .tagline {
+            font-style: italic;
+            color: #CB2D6F;
+            font-size: 18px;
+        }
+
+        section {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(80, 31, 58, 0.7);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            border: 1px solid #CB2D6F;
+            transition: all 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            color: #14A098;
+            border-bottom: 2px dashed #CB2D6F;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        p, li {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #CCCCCC;
+        }
+
+        ul {
+            list-style-position: inside;
+            padding-left: 5px;
+        }
+
+        a {
+            color: #CB2D6F;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        a:hover {
+            color: #14A098;
+            text-decoration: underline;
+        }
+
+        .social-links {
+            margin-top: 15px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            display: inline-block;
+            background: linear-gradient(45deg, #CB2D6F, #501F3A);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            box-shadow: 0 3px 10px rgba(80, 31, 58, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: linear-gradient(45deg, #501F3A, #0F292F);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(80, 31, 58, 0.4);
+            text-decoration: none;
+        }
+
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            color: #CB2D6F;
+            font-size: 24px;
+            transition: all 0.3s ease;
+            background: rgba(255,255,255,0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-icons a:hover {
+            color: #14A098;
+            transform: translateY(-3px);
+            background: rgba(203, 45, 111, 0.2);
+        }
+
+        /* Các phần khác giữ nguyên */
+        .portfolio-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+        
+        .artwork {
+            background: rgba(20, 160, 152, 0.2);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            border: 1px solid #CB2D6F;
+        }
+        
+        .artwork:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+        
+        .artwork-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            cursor: zoom-in;
+            border-bottom: 1px solid rgba(203, 45, 111, 0.3);
+        }
+        
+        .artwork-info {
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .artwork-title {
+            font-weight: 600;
+            color: #CB2D6F;
+            margin-bottom: 5px;
+        }
+        
+        .artwork-desc {
+            color: #CCCCCC;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 41, 47, 0.95);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            text-align: center;
+        }
+        
+        .lightbox-img {
+            max-height: 80vh;
+            max-width: 100%;
+            border: 3px solid #CB2D6F;
+            border-radius: 5px;
+        }
+        
+        .lightbox-caption {
+            color: white;
+            margin-top: 15px;
+            font-size: 18px;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .close-btn:hover {
+            color: #CB2D6F;
+            transform: scale(1.1);
+        }
+
+        /* Phần liên hệ mới */
+        .collab-section {
+            margin-top: 40px;
+            background: rgba(80, 31, 58, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #14A098;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .collab-section h2 {
+            text-align: center;
+            font-size: 26px;
+            margin-bottom: 20px;
+            color: #14A098;
+        }
+        
+        .collab-section p.intro {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #CB2D6F;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
+        .contact-info h3, .contact-form h3 {
+            color: #CB2D6F;
+            font-size: 22px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px dashed #14A098;
+        }
+        
+        .contact-item {
+            margin-bottom: 20px;
+        }
+        
+        .contact-item h4 {
+            color: #14A098;
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+        
+        .contact-item p, .contact-item a {
+            color: #CCCCCC;
+            font-size: 16px;
+        }
+        
+        .availability {
+            background: rgba(203, 45, 111, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 3px solid #14A098;
+            margin-top: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            color: #14A098;
+            margin-bottom: 8px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(203, 45, 111, 0.3);
+            color: #CCCCCC;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
+            border-color: #14A098;
+            box-shadow: 0 0 10px rgba(20, 160, 152, 0.3);
+            outline: none;
+        }
+        
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+        
+        .checkbox-group input {
+            margin-right: 10px;
+        }
+        
+        .checkbox-group label {
+            color: #CCCCCC;
+            font-size: 14px;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(45deg, #CB2D6F, #501F3A);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin: 0 auto;
+        }
+        
+        .submit-btn:hover {
+            background: linear-gradient(45deg, #501F3A, #CB2D6F);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(80, 31, 58, 0.4);
+        }
+        
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .collab-section {
+                padding: 20px;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+                border-radius: 15px;
+            }
+            
+            section {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            .avatar {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .portfolio-gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            .artwork-img {
+                height: 150px;
+            }
+            
+            .social-links {
+                flex-direction: column;
+            }
+            
+            .social-icons {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="file:///C:/Users/84349/Downloads/avatar1.jpg" class="avatar" alt="Ảnh đại diện Nguyễn Lê Trà My">
+            <h1>Nguyễn Lê Trà My</h1>
+            <p class="tagline">Graphic Designer</p>
+        </header>
+
+        <section class="about">
+            <h2>Về tôi</h2>
+            <p>Mình đang theo học thiết kế đồ họa tại một trường đại học. Có nền tảng về thiết kế và đang không ngừng nâng cao tay nghề.</p>
+            <p>✔ Kiến thức nền tảng về thiết kế đồ họa.<br>
+               ✔ Có hiểu biết Figma, Photoshop, Illustrator, Sketchup, Blender...<br>
+               ✔ Tư duy sáng tạo, không ngại thử nghiệm phong cách mới.</p>
+        </section>
+
+        <section class="skills">
+            <h2>Kỹ năng</h2>
+            <ul>
+                <li>Xây dựng thương hiệu, sử dụng Adobe Photoshop</li>
+                <li>Thiết kế UI/UX với Figma, Digital (UI, UX, Sketch)</li>
+                <li>Kỹ năng phác thảo tay, thiết lập ý tưởng</li>
+                <li>Sử dụng Git để quản lý phiên bản</li>
+            </ul>
+        </section>
+
+        <section class="portfolio">
+            <h2>Tác Phẩm Của Tôi</h2>
+            <div class="portfolio-gallery">
+                <div class="artwork">
+                    <img src="https://via.placeholder.com/600x400?text=Thiết+kế+bìa+sách" 
+                         class="artwork-img" 
+                         alt="Bìa sách Nghệ thuật sống"
+                         onclick="openLightbox(this.src, this.alt)">
+                    <div class="artwork-info">
+                        <div class="artwork-title">Bìa Sách "Nghệ Thuật Sống"</div>
+                        <div class="artwork-desc">Thiết kế phong cách minimal với màu pastel chủ đạo</div>
+                    </div>
+                </div>
+                
+                <div class="artwork">
+                    <img src="https://via.placeholder.com/600x400?text=Poster+sự+kiện" 
+                         class="artwork-img" 
+                         alt="Poster sự kiện văn hóa"
+                         onclick="openLightbox(this.src, this.alt)">
+                    <div class="artwork-info">
+                        <div class="artwork-title">Poster Sự Kiện Văn Hóa</div>
+                        <div class="artwork-desc">Thiết kế cho chương trình giao lưu Việt - Nhật</div>
+                    </div>
+                </div>
+                
+                <div class="artwork">
+                    <img src="https://via.placeholder.com/600x400?text=Logo+thương+hiệu" 
+                         class="artwork-img" 
+                         alt="Logo thương hiệu mỹ phẩm"
+                         onclick="openLightbox(this.src, this.alt)">
+                    <div class="artwork-info">
+                        <div class="artwork-title">Logo Thương Hiệu Mỹ Phẩm</div>
+                        <div class="artwork-desc">Concept "Vẻ đẹp tự nhiên" với đường nét mềm mại</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+            <span class="close-btn" onclick="closeLightbox()">&times;</span>
+            <div class="lightbox-content">
+                <img id="lightbox-img" class="lightbox-img">
+                <div id="lightbox-caption" class="lightbox-caption"></div>
+            </div>
+        </div>
+
+        <section class="contact">
+            <h2>Liên hệ</h2>
+            <p>📧 Email: <a href="mailto:0393652299my@gmail.com">0393652299my@gmail.com</a></p>
+            <p>📞 SĐT: 0392920728</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/my.xam.3388" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/tramy4929/" target="_blank">Instagram</a>
+                <a href="https://www.pinterest.com/Miae696/" target="_blank">Pinterest</a>
+                <a href="https://x.com/zmy1393565" target="_blank">X (Twitter)</a>
+            </div>
+        </section>
+
+        <section class="collab-section">
+            <h2>Hãy Cùng Nhau Hợp Tác</h2>
+            <p class="intro">Bạn có ý tưởng dự án hoặc muốn thảo luận về khả năng hợp tác? Tôi rất muốn được nghe từ bạn.</p>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Thông Tin Liên Hệ</h3>
+                    
+                    <div class="contact-item">
+                        <h4>E-mail</h4>
+                        <a href="mailto:0393652299my@gmail.com">0393652299my@gmail.com</a>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h4>Điện Thoại</h4>
+                        <p>0892307788</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h4>Địa Điểm</h4>
+                        <p>Thái Nguyên, Việt Nam</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h4>Theo dõi tôi</h4>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/my.xam.3388" target="_blank" title="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/tramy4929/" target="_blank" title="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.pinterest.com/Miae696/" target="_blank" title="Pinterest">
+                                <i class="fab fa-pinterest-p"></i>
+                            </a>
+                            <a href="https://x.com/zmy1393565" target="_blank" title="X (Twitter)">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="availability">
+                        <h4>Hiện Đang Sẵn Sàng</h4>
+                        <p>Tôi hiện đang nhận các dự án mới và rất mong được hợp tác với bạn trong dự án sáng tạo tiếp theo của bạn.</p>
+                        <p>✔ Sẵn sàng cho các dự án tự do</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Gửi tin nhắn</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Họ Tên</label>
+                            <input type="text" id="name" class="form-control" placeholder="Họ tên của bạn" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" class="form-control" placeholder="Địa chỉ email của bạn" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Tiêu Đề</label>
+                            <input type="text" id="subject" class="form-control" placeholder="Nội dung liên quan đến?">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Nội Dung</label>
+                            <textarea id="message" class="form-control" placeholder="Hãy cho tôi biết về dự án của bạn..." required></textarea>
+                        </div>
+                        
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="privacy" required>
+                            <label for="privacy">Tôi đồng ý với chính sách bảo mật và cho phép dữ liệu của tôi được xử lý cho liên hệ mục tiêu.</label>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Gửi tin nhắn</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function openLightbox(imgSrc, imgAlt) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            
+            lightbox.style.display = 'flex';
+            lightboxImg.src = imgSrc;
+            lightboxCaption.textContent = imgAlt;
+            
+            event.stopPropagation();
+        }
+        
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+        
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
