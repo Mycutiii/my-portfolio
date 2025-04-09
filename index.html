@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nguyễn Lê Trà My - Graphic Designer</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <!-- Thêm Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Reset CSS */
@@ -25,6 +24,59 @@
             position: relative;
         }
 
+        /* Navigation Header */
+        .main-header {
+            background: rgba(15, 41, 47, 0.95);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid #14A098;
+        }
+
+        .main-nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #CB2D6F;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover {
+            color: #14A098;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #CCCCCC;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        .nav-links a:hover {
+            color: #14A098;
+            background: rgba(203, 45, 111, 0.1);
+        }
+
+        /* Hiệu ứng sao lấp lánh */
         body::before {
             content: "";
             position: fixed;
@@ -50,7 +102,7 @@
 
         .container {
             max-width: 800px;
-            margin: 0 auto;
+            margin: 100px auto 50px; /* Điều chỉnh margin-top cho header */
             background: rgba(15, 41, 47, 0.85);
             padding: 30px;
             border-radius: 20px;
@@ -59,6 +111,7 @@
                 0 0 15px rgba(255, 255, 255, 0.1) inset;
             backdrop-filter: blur(8px);
             border: 2px solid #14A098;
+            position: relative;
         }
 
         header {
@@ -195,7 +248,7 @@
             background: rgba(203, 45, 111, 0.2);
         }
 
-        /* Các phần khác giữ nguyên */
+        /* Portfolio Gallery */
         .portfolio-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -242,6 +295,7 @@
             line-height: 1.5;
         }
         
+        /* Lightbox */
         .lightbox {
             display: none;
             position: fixed;
@@ -290,7 +344,7 @@
             transform: scale(1.1);
         }
 
-        /* Phần liên hệ mới */
+        /* Collaboration Section */
         .collab-section {
             margin-top: 40px;
             background: rgba(80, 31, 58, 0.7);
@@ -418,6 +472,7 @@
             box-shadow: 0 5px 15px rgba(80, 31, 58, 0.4);
         }
         
+        /* Responsive Design */
         @media (max-width: 768px) {
             .contact-grid {
                 grid-template-columns: 1fr;
@@ -426,12 +481,17 @@
             .collab-section {
                 padding: 20px;
             }
+            
+            .nav-links {
+                gap: 1rem;
+            }
         }
         
         @media (max-width: 600px) {
             .container {
                 padding: 15px;
                 border-radius: 15px;
+                margin-top: 120px;
             }
             
             section {
@@ -462,10 +522,33 @@
             .social-icons {
                 justify-content: center;
             }
+            
+            .main-nav {
+                flex-direction: column;
+                padding: 0.5rem;
+            }
+            
+            .nav-links {
+                margin-top: 0.5rem;
+                gap: 0.5rem;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <nav class="main-nav">
+            <a href="#" class="logo">My Portfolio</a>
+            <div class="nav-links">
+                <a href="#home">Trang chủ</a>
+                <a href="#about">Giới thiệu</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Liên hệ</a>
+            </div>
+        </nav>
+    </header>
+
     <div class="container">
         <header>
             <img src="file:///C:/Users/84349/Downloads/avatar1.jpg" class="avatar" alt="Ảnh đại diện Nguyễn Lê Trà My">
@@ -473,7 +556,7 @@
             <p class="tagline">Graphic Designer</p>
         </header>
 
-        <section class="about">
+        <section id="about" class="about">
             <h2>Về tôi</h2>
             <p>Mình đang theo học thiết kế đồ họa tại một trường đại học. Có nền tảng về thiết kế và đang không ngừng nâng cao tay nghề.</p>
             <p>✔ Kiến thức nền tảng về thiết kế đồ họa.<br>
@@ -491,7 +574,7 @@
             </ul>
         </section>
 
-        <section class="portfolio">
+        <section id="portfolio" class="portfolio">
             <h2>Tác Phẩm Của Tôi</h2>
             <div class="portfolio-gallery">
                 <div class="artwork">
@@ -537,7 +620,7 @@
             </div>
         </div>
 
-        <section class="contact">
+        <section id="contact" class="contact">
             <h2>Liên hệ</h2>
             <p>📧 Email: <a href="mailto:0393652299my@gmail.com">0393652299my@gmail.com</a></p>
             <p>📞 SĐT: 0392920728</p>
@@ -653,6 +736,28 @@
             if (event.key === 'Escape') {
                 closeLightbox();
             }
+        });
+
+        // Thêm smooth scrolling cho navigation
+        document.querySelectorAll('.nav-links a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#home') {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
         });
     </script>
 </body>
