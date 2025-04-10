@@ -114,9 +114,13 @@
             position: relative;
         }
 
+        /* Thay đổi phần header */
         header {
-            text-align: center;
+            display: flex;
+            align-items: center;
+            gap: 30px;
             margin-bottom: 30px;
+            text-align: left;
         }
 
         .avatar {
@@ -125,17 +129,20 @@
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid #CB2D6F;
-            display: block;
-            margin: 0 auto 15px;
             box-shadow: 
                 0 0 15px rgba(203, 45, 111, 0.4),
                 0 0 0 5px rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
+            flex-shrink: 0;
         }
 
         .avatar:hover {
             transform: scale(1.05);
             box-shadow: 0 0 20px rgba(203, 45, 111, 0.6);
+        }
+
+        .header-content {
+            flex-grow: 1;
         }
 
         h1 {
@@ -370,7 +377,7 @@
         
         .contact-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             gap: 30px;
         }
         
@@ -403,6 +410,23 @@
             border-radius: 10px;
             border-left: 3px solid #14A098;
             margin-top: 20px;
+        }
+        
+        /* Contact Form Section - Tách riêng */
+        .contact-form-section {
+            margin-top: 40px;
+            background: rgba(80, 31, 58, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #14A098;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .contact-form-section h2 {
+            text-align: center;
+            color: #14A098;
+            margin-bottom: 20px;
+            font-size: 26px;
         }
         
         .form-group {
@@ -478,7 +502,7 @@
                 grid-template-columns: 1fr;
             }
             
-            .collab-section {
+            .collab-section, .contact-form-section {
                 padding: 20px;
             }
             
@@ -494,7 +518,7 @@
                 margin-top: 120px;
             }
             
-            section {
+            section, .contact-form-section {
                 padding: 15px;
             }
             
@@ -532,6 +556,17 @@
                 margin-top: 0.5rem;
                 gap: 0.5rem;
             }
+
+            /* Responsive cho header mới */
+            header {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            .avatar {
+                margin: 0 auto;
+            }
         }
     </style>
 </head>
@@ -552,8 +587,10 @@
     <div class="container">
         <header>
             <img src="file:///C:/Users/84349/Downloads/avatar1.jpg" class="avatar" alt="Ảnh đại diện Nguyễn Lê Trà My">
-            <h1>Nguyễn Lê Trà My</h1>
-            <p class="tagline">Graphic Designer</p>
+            <div class="header-content">
+                <h1>Nguyễn Lê Trà My</h1>
+                <p class="tagline">Graphic Designer</p>
+            </div>
         </header>
 
         <section id="about" class="about">
@@ -620,8 +657,7 @@
             </div>
         </div>
 
-
-        <section class="collab-section">
+        <section class="collab-section" id="contact">
             <h2>Hãy Cùng Nhau Hợp Tác</h2>
             <p class="intro">Bạn có ý tưởng dự án hoặc muốn thảo luận về khả năng hợp tác? Tôi rất muốn được nghe từ bạn.</p>
             
@@ -668,39 +704,40 @@
                         <p>✔ Sẵn sàng cho các dự án tự do</p>
                     </div>
                 </div>
-                
-                <div class="contact-form">
-                    <h3>Gửi tin nhắn</h3>
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Họ Tên</label>
-                            <input type="text" id="name" class="form-control" placeholder="Họ tên của bạn" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">E-mail</label>
-                            <input type="email" id="email" class="form-control" placeholder="Địa chỉ email của bạn" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="subject">Tiêu Đề</label>
-                            <input type="text" id="subject" class="form-control" placeholder="Nội dung liên quan đến?">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Nội Dung</label>
-                            <textarea id="message" class="form-control" placeholder="Hãy cho tôi biết về dự án của bạn..." required></textarea>
-                        </div>
-                        
-                        <div class="checkbox-group">
-                            <input type="checkbox" id="privacy" required>
-                            <label for="privacy">Tôi đồng ý với chính sách bảo mật và cho phép dữ liệu của tôi được xử lý cho liên hệ mục tiêu.</label>
-                        </div>
-                        
-                        <button type="submit" class="submit-btn">Gửi tin nhắn</button>
-                    </form>
-                </div>
             </div>
+        </section>
+
+        <!-- Phần gửi tin nhắn tách riêng -->
+        <section class="contact-form-section">
+            <h2>Gửi Tin Nhắn Cho Tôi</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Họ Tên</label>
+                    <input type="text" id="name" class="form-control" placeholder="Họ tên của bạn" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" class="form-control" placeholder="Địa chỉ email của bạn" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Tiêu Đề</label>
+                    <input type="text" id="subject" class="form-control" placeholder="Nội dung liên quan đến?">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Nội Dung</label>
+                    <textarea id="message" class="form-control" placeholder="Hãy cho tôi biết về dự án của bạn..." required></textarea>
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="privacy" required>
+                    <label for="privacy">Tôi đồng ý với chính sách bảo mật và cho phép dữ liệu của tôi được xử lý cho liên hệ mục tiêu.</label>
+                </div>
+                
+                <button type="submit" class="submit-btn">Gửi tin nhắn</button>
+            </form>
         </section>
     </div>
 
