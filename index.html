@@ -102,7 +102,7 @@
 
         .container {
             max-width: 800px;
-            margin: 100px auto 50px; /* Điều chỉnh margin-top cho header */
+            margin: 100px auto 50px;
             background: rgba(15, 41, 47, 0.85);
             padding: 30px;
             border-radius: 20px;
@@ -412,7 +412,7 @@
             margin-top: 20px;
         }
         
-        /* Contact Form Section - Tách riêng */
+        /* Contact Form Section */
         .contact-form-section {
             margin-top: 40px;
             background: rgba(80, 31, 58, 0.7);
@@ -495,6 +495,114 @@
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(80, 31, 58, 0.4);
         }
+
+        /* Skills Section Enhancements */
+        .skills-details {
+            margin-top: 20px;
+        }
+        
+        .skills-details h3 {
+            color: #14A098;
+            margin: 25px 0 15px;
+            font-size: 20px;
+            border-bottom: 1px dashed #CB2D6F;
+            padding-bottom: 5px;
+        }
+        
+        .skill-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .skill-name {
+            width: 200px;
+            color: #CCCCCC;
+            font-weight: 500;
+        }
+        
+        .skill-bar {
+            flex-grow: 1;
+            height: 10px;
+            background: rgba(20, 160, 152, 0.2);
+            border-radius: 5px;
+            margin: 0 15px;
+            overflow: hidden;
+        }
+        
+        .skill-level {
+            height: 100%;
+            background: linear-gradient(90deg, #CB2D6F, #501F3A);
+            border-radius: 5px;
+            transition: width 1s ease-in-out;
+        }
+        
+        .skill-percent {
+            color: #CB2D6F;
+            font-weight: bold;
+            width: 40px;
+            text-align: right;
+        }
+        
+        .software-skills {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .software-item {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .software-item span {
+            color: #CCCCCC;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .software-item span::before {
+            content: "•";
+            color: #CB2D6F;
+            position: absolute;
+            left: 0;
+        }
+        
+        .experience-item {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid rgba(203, 45, 111, 0.3);
+        }
+        
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+        
+        .experience-item h4 {
+            color: #14A098;
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+        
+        .company {
+            color: #CB2D6F;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        
+        .duration {
+            color: #CCCCCC;
+            font-size: 14px;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        
+        .description {
+            color: #CCCCCC;
+            line-height: 1.6;
+        }
         
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -567,6 +675,27 @@
             .avatar {
                 margin: 0 auto;
             }
+
+            /* Responsive cho phần kỹ năng */
+            .skill-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .skill-name {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+            
+            .skill-bar {
+                width: 100%;
+                margin: 5px 0;
+            }
+            
+            .software-skills {
+                flex-direction: column;
+                gap: 15px;
+            }
         }
     </style>
 </head>
@@ -602,13 +731,87 @@
         </section>
 
         <section class="skills">
-            <h2>Kỹ năng</h2>
-            <ul>
-                <li>Xây dựng thương hiệu, sử dụng Adobe Photoshop</li>
-                <li>Thiết kế UI/UX với Figma, Digital (UI, UX, Sketch)</li>
-                <li>Kỹ năng phác thảo tay, thiết lập ý tưởng</li>
-                <li>Sử dụng Git để quản lý phiên bản</li>
-            </ul>
+            <h2>Kỹ năng & Kinh Nghiệm</h2>
+            <p>Tôi đã phát triển một bộ kỹ năng đa dạng trong suốt sự nghiệp, cho phép tôi cung cấp các giải pháp thiết kế toàn diện cho nhiều nhu cầu khác nhau.</p>
+
+            <div class="skills-details">
+                <h3>Kỹ Năng Thiết Kế</h3>
+                <div class="skill-item">
+                    <span class="skill-name">Thiết Kế Nhận Diện Thương Hiệu</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 60%;"></div>
+                    </div>
+                    <span class="skill-percent">60%</span>
+                </div>
+                
+                <div class="skill-item">
+                    <span class="skill-name">Thiết Kế UI/UX</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 75%;"></div>
+                    </div>
+                    <span class="skill-percent">75%</span>
+                </div>
+                
+                <div class="skill-item">
+                    <span class="skill-name">Typography</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 70%;"></div>
+                    </div>
+                    <span class="skill-percent">70%</span>
+                </div>
+                
+                <div class="skill-item">
+                    <span class="skill-name">Minh Họa</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 60%;"></div>
+                    </div>
+                    <span class="skill-percent">60%</span>
+                </div>
+                
+                <div class="skill-item">
+                    <span class="skill-name">Đồ Họa Chuyển Động</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 50%;"></div>
+                    </div>
+                    <span class="skill-percent">50%</span>
+                </div>
+                
+                <h3>Công Cụ & Phần Mềm</h3>
+                <div class="software-skills">
+                    <div class="software-item">
+                        <span>Photoshop</span>
+                        <span>Illustrator</span>
+                        <span>Sketch</span>
+                        <span>Blender</span>
+                    </div>
+                    <div class="software-item">
+                        <span>Canva</span>
+                        <span>After Effects</span>
+                    </div>
+                </div>
+                
+                <h3>Kinh Nghiệm Làm Việc</h3>
+                <div class="experience-item">
+                    <h4>Nhà Thiết Kế Cao Cấp</h4>
+                    <p class="company">Creative Studio</p>
+                    <p class="duration">Tháng 1/2020 - Hiện Tại</p>
+                    <p class="description">Dẫn dắt các dự án thiết kế cho khách hàng lớn, quản lý nhóm nhà thiết kế cấp dưới và đảm bảo sản phẩm chất lượng cao. Phát triển hướng dẫn thương hiệu và hệ thống trực quan cho nhiều ngành bao gồm công nghệ, y tế và bán lẻ.</p>
+                </div>
+                
+                <div class="experience-item">
+                    <h4>Nhà Thiết Kế Junior</h4>
+                    <p class="company">Design Agency</p>
+                    <p class="duration">Tháng 3/2018 - Tháng 12/2019</p>
+                    <p class="description">Hợp tác với các nhà thiết kế cấp cao trong các dự án nhận diện thương hiệu, tạo ra nội dung kỹ thuật số cho các chiến dịch truyền thông xã hội, và hỗ trợ thiết kế UI cho ứng dụng web và di động.</p>
+                </div>
+                
+                <div class="experience-item">
+                    <h4>Thực Tập Sinh Thiết Kế</h4>
+                    <p class="company">Creative Workshop</p>
+                    <p class="duration">Tháng 6/2017 - Tháng 2/2018</p>
+                    <p class="description">Hỗ trợ nhóm thiết kế với nghiên cứu hình ảnh, tạo moodboard, và các nhiệm vụ thiết kế cơ bản. Có được kinh nghiệm thực tế với phần mềm theo tiêu chuẩn ngành và quy trình thiết kế.</p>
+                </div>
+            </div>
         </section>
 
         <section id="portfolio" class="portfolio">
