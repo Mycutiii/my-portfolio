@@ -17,23 +17,23 @@
         body {
             font-family: 'Playfair Display', serif;
             line-height: 1.6;
-            color: #FFFFFF; /* Chữ màu trắng */
+            color: #333333; /* Màu chữ tối */
             padding: 20px;
-            background-color: #333333; /* Nền ngoài màu xám đậm */
+            background-color: #f8f1f0; /* Nền hồng nhạt */
             min-height: 100vh;
             position: relative;
         }
 
         /* Navigation Header */
         .main-header {
-            background: rgba(25, 25, 25, 0.95); /* Màu đen */
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            background: rgba(232, 195, 186, 0.95); /* Màu hồng nhạt */
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
             backdrop-filter: blur(8px);
-            border-bottom: 1px solid #555555;
+            border-bottom: 1px solid #83344A; /* Màu đỏ đậm */
         }
 
         .main-nav {
@@ -48,13 +48,13 @@
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
-            color: #FFFFFF;
+            color: #83344A; /* Màu đỏ đậm */
             text-decoration: none;
             transition: all 0.3s ease;
         }
 
         .logo:hover {
-            color: #AAAAAA;
+            color: #a04d60; /* Màu đỏ đậm nhạt hơn */
         }
 
         .nav-links {
@@ -63,7 +63,7 @@
         }
 
         .nav-links a {
-            color: #FFFFFF;
+            color: #333333; /* Màu chữ tối */
             text-decoration: none;
             font-weight: 500;
             transition: all 0.3s ease;
@@ -72,8 +72,8 @@
         }
 
         .nav-links a:hover {
-            color: #DDDDDD;
-            background: rgba(255, 255, 255, 0.1);
+            color: #83344A; /* Màu đỏ đậm */
+            background: rgba(131, 52, 74, 0.1); /* Màu đỏ đậm với độ trong suốt */
         }
 
         /* Hiệu ứng sao lấp lánh */
@@ -85,14 +85,14 @@
             width: 100%;
             height: 100%;
             background: 
-                radial-gradient(2px 2px at 20px 30px, #555555, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 40px 70px, #777777, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 90px 40px, #555555, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 130px 80px, #777777, rgba(0,0,0,0));
+                radial-gradient(2px 2px at 20px 30px, #83344A, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 40px 70px, #E8C3BA, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 90px 40px, #83344A, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 130px 80px, #E8C3BA, rgba(0,0,0,0));
             background-size: 200px 200px;
             animation: stars 50s linear infinite;
             z-index: -1;
-            opacity: 0.6;
+            opacity: 0.3;
         }
 
         @keyframes stars {
@@ -103,14 +103,14 @@
         .container {
             max-width: 800px;
             margin: 100px auto 50px;
-            background: rgba(25, 25, 25, 0.85); /* Khung giới thiệu màu đen */
+            background: rgba(255, 255, 255, 0.9); /* Nền trắng trong suốt */
             padding: 30px;
             border-radius: 20px;
             box-shadow: 
-                0 0 25px rgba(50, 50, 50, 0.5),
+                0 0 25px rgba(131, 52, 74, 0.2), /* Màu đỏ đậm */
                 0 0 15px rgba(255, 255, 255, 0.1) inset;
             backdrop-filter: blur(8px);
-            border: 2px solid #555555;
+            border: 2px solid #83344A; /* Màu đỏ đậm */
             position: relative;
         }
 
@@ -128,9 +128,9 @@
             height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid #777777;
+            border: 3px solid #83344A; /* Màu đỏ đậm */
             box-shadow: 
-                0 0 15px rgba(170, 170, 170, 0.4),
+                0 0 15px rgba(131, 52, 74, 0.3),
                 0 0 0 5px rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
             flex-shrink: 0;
@@ -138,7 +138,7 @@
 
         .avatar:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(170, 170, 170, 0.6);
+            box-shadow: 0 0 20px rgba(131, 52, 74, 0.4);
         }
 
         .header-content {
@@ -146,36 +146,36 @@
         }
 
         h1 {
-            color: #FFFFFF;
+            color: #83344A; /* Màu đỏ đậm */
             margin: 10px 0;
             font-size: 28px;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
         }
 
         .tagline {
             font-style: italic;
-            color: #DDDDDD;
+            color: #a04d60; /* Màu đỏ đậm nhạt hơn */
             font-size: 18px;
         }
 
         section {
             margin-bottom: 25px;
             padding: 20px;
-            background: rgba(40, 40, 40, 0.7); /* Màu đen nhạt */
+            background: rgba(255, 255, 255, 0.8); /* Nền trắng trong suốt */
             border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            border: 1px solid #555555;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #E8C3BA; /* Màu hồng nhạt */
             transition: all 0.3s ease;
         }
 
         section:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            box-shadow: 0 8px 25px rgba(131, 52, 74, 0.2); /* Màu đỏ đậm */
         }
 
         h2 {
-            color: #FFFFFF;
-            border-bottom: 2px dashed #777777;
+            color: #83344A; /* Màu đỏ đậm */
+            border-bottom: 2px dashed #E8C3BA; /* Màu hồng nhạt */
             padding-bottom: 8px;
             margin-bottom: 15px;
             font-size: 22px;
@@ -184,7 +184,7 @@
         p, li {
             margin-bottom: 10px;
             font-size: 16px;
-            color: #FFFFFF;
+            color: #333333; /* Màu chữ tối */
         }
 
         ul {
@@ -193,14 +193,14 @@
         }
 
         a {
-            color: #DDDDDD;
+            color: #83344A; /* Màu đỏ đậm */
             text-decoration: none;
             transition: all 0.3s ease;
             font-weight: 500;
         }
 
         a:hover {
-            color: #FFFFFF;
+            color: #a04d60; /* Màu đỏ đậm nhạt hơn */
             text-decoration: underline;
         }
 
@@ -213,19 +213,19 @@
 
         .social-links a {
             display: inline-block;
-            background: linear-gradient(45deg, #555555, #333333);
+            background: linear-gradient(45deg, #83344A, #a04d60); /* Đỏ đậm đến đỏ nhạt */
             color: white;
             padding: 8px 20px;
             border-radius: 50px;
             font-size: 14px;
-            box-shadow: 0 3px 10px rgba(85, 85, 85, 0.3);
+            box-shadow: 0 3px 10px rgba(131, 52, 74, 0.3);
             transition: all 0.3s ease;
         }
 
         .social-links a:hover {
-            background: linear-gradient(45deg, #333333, #555555);
+            background: linear-gradient(45deg, #a04d60, #83344A);
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(85, 85, 85, 0.4);
+            box-shadow: 0 5px 15px rgba(131, 52, 74, 0.4);
             text-decoration: none;
         }
 
@@ -237,10 +237,10 @@
         }
 
         .social-icons a {
-            color: #FFFFFF;
+            color: #333333; /* Màu chữ tối */
             font-size: 24px;
             transition: all 0.3s ease;
-            background: rgba(255,255,255,0.1);
+            background: rgba(131, 52, 74, 0.1); /* Màu đỏ đậm */
             width: 40px;
             height: 40px;
             border-radius: 50%;
@@ -250,9 +250,9 @@
         }
 
         .social-icons a:hover {
-            color: #DDDDDD;
+            color: white;
             transform: translateY(-3px);
-            background: rgba(170, 170, 170, 0.2);
+            background: rgba(131, 52, 74, 0.3); /* Màu đỏ đậm */
         }
 
         /* Portfolio Gallery */
@@ -264,17 +264,17 @@
         }
         
         .artwork {
-            background: rgba(85, 85, 85, 0.2);
+            background: rgba(131, 52, 74, 0.1); /* Màu đỏ đậm */
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
-            border: 1px solid #555555;
+            border: 1px solid #E8C3BA; /* Màu hồng nhạt */
         }
         
         .artwork:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 25px rgba(131, 52, 74, 0.2); /* Màu đỏ đậm */
         }
         
         .artwork-img {
@@ -282,7 +282,7 @@
             height: 180px;
             object-fit: cover;
             cursor: zoom-in;
-            border-bottom: 1px solid rgba(170, 170, 170, 0.3);
+            border-bottom: 1px solid rgba(131, 52, 74, 0.2); /* Màu đỏ đậm */
         }
         
         .artwork-info {
@@ -292,12 +292,12 @@
         
         .artwork-title {
             font-weight: 600;
-            color: #DDDDDD;
+            color: #83344A; /* Màu đỏ đậm */
             margin-bottom: 5px;
         }
         
         .artwork-desc {
-            color: #FFFFFF;
+            color: #333333; /* Màu chữ tối */
             font-size: 14px;
             line-height: 1.5;
         }
@@ -326,7 +326,7 @@
         .lightbox-img {
             max-height: 80vh;
             max-width: 100%;
-            border: 3px solid #555555;
+            border: 3px solid #83344A; /* Màu đỏ đậm */
             border-radius: 5px;
         }
         
@@ -347,32 +347,32 @@
         }
         
         .close-btn:hover {
-            color: #AAAAAA;
+            color: #E8C3BA; /* Màu hồng nhạt */
             transform: scale(1.1);
         }
 
         /* Collaboration Section */
         .collab-section {
             margin-top: 40px;
-            background: rgba(40, 40, 40, 0.7);
+            background: rgba(255, 255, 255, 0.8); /* Nền trắng trong suốt */
             padding: 30px;
             border-radius: 15px;
-            border: 1px solid #555555;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            border: 1px solid #83344A; /* Màu đỏ đậm */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
         .collab-section h2 {
             text-align: center;
             font-size: 26px;
             margin-bottom: 20px;
-            color: #FFFFFF;
+            color: #83344A; /* Màu đỏ đậm */
         }
         
         .collab-section p.intro {
             text-align: center;
             font-size: 18px;
             margin-bottom: 30px;
-            color: #DDDDDD;
+            color: #a04d60; /* Màu đỏ đậm nhạt hơn */
         }
         
         .contact-grid {
@@ -382,11 +382,11 @@
         }
         
         .contact-info h3, .contact-form h3 {
-            color: #DDDDDD;
+            color: #83344A; /* Màu đỏ đậm */
             font-size: 22px;
             margin-bottom: 20px;
             padding-bottom: 10px;
-            border-bottom: 2px dashed #777777;
+            border-bottom: 2px dashed #E8C3BA; /* Màu hồng nhạt */
         }
         
         .contact-item {
@@ -394,37 +394,37 @@
         }
         
         .contact-item h4 {
-            color: #FFFFFF;
+            color: #333333; /* Màu chữ tối */
             margin-bottom: 8px;
             font-size: 18px;
         }
         
         .contact-item p, .contact-item a {
-            color: #FFFFFF;
+            color: #333333; /* Màu chữ tối */
             font-size: 16px;
         }
         
         .availability {
-            background: rgba(170, 170, 170, 0.1);
+            background: rgba(131, 52, 74, 0.1); /* Màu đỏ đậm */
             padding: 15px;
             border-radius: 10px;
-            border-left: 3px solid #555555;
+            border-left: 3px solid #E8C3BA; /* Màu hồng nhạt */
             margin-top: 20px;
         }
         
         /* Contact Form Section */
         .contact-form-section {
             margin-top: 40px;
-            background: rgba(40, 40, 40, 0.7);
+            background: rgba(255, 255, 255, 0.8); /* Nền trắng trong suốt */
             padding: 30px;
             border-radius: 15px;
-            border: 1px solid #555555;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            border: 1px solid #83344A; /* Màu đỏ đậm */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
         .contact-form-section h2 {
             text-align: center;
-            color: #FFFFFF;
+            color: #83344A; /* Màu đỏ đậm */
             margin-bottom: 20px;
             font-size: 26px;
         }
@@ -435,23 +435,23 @@
         
         .form-group label {
             display: block;
-            color: #FFFFFF;
+            color: #83344A; /* Màu đỏ đậm */
             margin-bottom: 8px;
         }
         
         .form-control {
             width: 100%;
             padding: 12px;
-            background: rgba(255,255,255,0.1);
-            border: 1px solid rgba(170, 170, 170, 0.3);
-            color: #FFFFFF;
+            background: rgba(255,255,255,0.9);
+            border: 1px solid rgba(131, 52, 74, 0.3); /* Màu đỏ đậm */
+            color: #333333; /* Màu chữ tối */
             border-radius: 5px;
             transition: all 0.3s ease;
         }
         
         .form-control:focus {
-            border-color: #777777;
-            box-shadow: 0 0 10px rgba(170, 170, 170, 0.3);
+            border-color: #83344A; /* Màu đỏ đậm */
+            box-shadow: 0 0 10px rgba(131, 52, 74, 0.2);
             outline: none;
         }
         
@@ -471,12 +471,12 @@
         }
         
         .checkbox-group label {
-            color: #FFFFFF;
+            color: #333333; /* Màu chữ tối */
             font-size: 14px;
         }
         
         .submit-btn {
-            background: linear-gradient(45deg, #555555, #333333);
+            background: linear-gradient(45deg, #83344A, #a04d60); /* Đỏ đậm đến đỏ nhạt */
             color: white;
             padding: 12px 30px;
             border: none;
@@ -491,9 +491,9 @@
         }
         
         .submit-btn:hover {
-            background: linear-gradient(45deg, #333333, #555555);
+            background: linear-gradient(45deg, #a04d60, #83344A);
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(85, 85, 85, 0.4);
+            box-shadow: 0 5px 15px rgba(131, 52, 74, 0.3);
         }
 
         /* Skills Section Enhancements */
@@ -502,10 +502,10 @@
         }
         
         .skills-details h3 {
-            color: #FFFFFF;
+            color: #83344A; /* Màu đỏ đậm */
             margin: 25px 0 15px;
             font-size: 20px;
-            border-bottom: 1px dashed #777777;
+            border-bottom: 1px dashed #E8C3BA; /* Màu hồng nhạt */
             padding-bottom: 5px;
         }
         
@@ -518,14 +518,14 @@
         
         .skill-name {
             width: 200px;
-            color: #FFFFFF;
+            color: #333333; /* Màu chữ tối */
             font-weight: 500;
         }
         
         .skill-bar {
             flex-grow: 1;
             height: 10px;
-            background: rgba(170, 170, 170, 0.2);
+            background: rgba(131, 52, 74, 0.2); /* Màu đỏ đậm */
             border-radius: 5px;
             margin: 0 15px;
             overflow: hidden;
@@ -533,13 +533,13 @@
         
         .skill-level {
             height: 100%;
-            background: linear-gradient(90deg, #555555, #333333);
+            background: linear-gradient(90deg, #83344A, #a04d60); /* Đỏ đậm đến đỏ nhạt */
             border-radius: 5px;
             transition: width 1s ease-in-out;
         }
         
         .skill-percent {
-            color: #DDDDDD;
+            color: #83344A; /* Màu đỏ đậm */
             font-weight: bold;
             width: 40px;
             text-align: right;
@@ -558,14 +558,14 @@
         }
         
         .software-item span {
-            color: #FFFFFF;
+            color: #333333; /* Màu chữ tối */
             position: relative;
             padding-left: 20px;
         }
         
         .software-item span::before {
             content: "•";
-            color: #777777;
+            color: #83344A; /* Màu đỏ đậm */
             position: absolute;
             left: 0;
         }
@@ -573,7 +573,7 @@
         .experience-item {
             margin-bottom: 25px;
             padding-bottom: 25px;
-            border-bottom: 1px solid rgba(170, 170, 170, 0.3);
+            border-bottom: 1px solid rgba(131, 52, 74, 0.2); /* Màu đỏ đậm */
         }
         
         .experience-item:last-child {
@@ -581,26 +581,26 @@
         }
         
         .experience-item h4 {
-            color: #FFFFFF;
+            color: #83344A; /* Màu đỏ đậm */
             margin-bottom: 5px;
             font-size: 18px;
         }
         
         .company {
-            color: #DDDDDD;
+            color: #a04d60; /* Màu đỏ đậm nhạt hơn */
             font-weight: 500;
             margin-bottom: 5px;
         }
         
         .duration {
-            color: #FFFFFF;
+            color: #333333; /* Màu chữ tối */
             font-size: 14px;
             margin-bottom: 10px;
             font-style: italic;
         }
         
         .description {
-            color: #FFFFFF;
+            color: #333333; /* Màu chữ tối */
             line-height: 1.6;
         }
         
@@ -931,63 +931,4 @@
                 
                 <div class="form-group">
                     <label for="message">Nội Dung</label>
-                    <textarea id="message" class="form-control" placeholder="Hãy cho tôi biết về dự án của bạn..." required></textarea>
-                </div>
-                
-                <div class="checkbox-group">
-                    <input type="checkbox" id="privacy" required>
-                    <label for="privacy">Tôi đồng ý với chính sách bảo mật và cho phép dữ liệu của tôi được xử lý cho liên hệ mục tiêu.</label>
-                </div>
-                
-                <button type="submit" class="submit-btn">Gửi tin nhắn</button>
-            </form>
-        </section>
-    </div>
-
-    <script>
-        function openLightbox(imgSrc, imgAlt) {
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImg = document.getElementById('lightbox-img');
-            const lightboxCaption = document.getElementById('lightbox-caption');
-            
-            lightbox.style.display = 'flex';
-            lightboxImg.src = imgSrc;
-            lightboxCaption.textContent = imgAlt;
-            
-            event.stopPropagation();
-        }
-        
-        function closeLightbox() {
-            document.getElementById('lightbox').style.display = 'none';
-        }
-        
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                closeLightbox();
-            }
-        });
-
-        // Thêm smooth scrolling cho navigation
-        document.querySelectorAll('.nav-links a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if(targetId === '#home') {
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
-                } else {
-                    const targetElement = document.querySelector(targetId);
-                    if(targetElement) {
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+                    <textarea id="message" class="form-control"
