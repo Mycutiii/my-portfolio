@@ -17,23 +17,23 @@
         body {
             font-family: 'Playfair Display', serif;
             line-height: 1.6;
-            color: #333333; /* Màu chữ tối */
+            color: #FFFFFF;
             padding: 20px;
-            background-color: #f8f1f0; /* Nền hồng nhạt */
+            background-color: #2B2315; /* Màu nền chính đổi thành màu nâu đậm (#2B2315) */
             min-height: 100vh;
             position: relative;
         }
 
         /* Navigation Header */
         .main-header {
-            background: rgba(232, 195, 186, 0.95); /* Màu hồng nhạt */
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: rgba(43, 35, 21, 0.95); /* Màu nâu đậm */
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
             backdrop-filter: blur(8px);
-            border-bottom: 1px solid #83344A; /* Màu đỏ đậm */
+            border-bottom: 1px solid #953019; /* Viền đỏ đô */
         }
 
         .main-nav {
@@ -48,13 +48,13 @@
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
-            color: #83344A; /* Màu đỏ đậm */
+            color: #FFFFFF;
             text-decoration: none;
             transition: all 0.3s ease;
         }
 
         .logo:hover {
-            color: #a04d60; /* Màu đỏ đậm nhạt hơn */
+            color: #AAAAAA;
         }
 
         .nav-links {
@@ -63,7 +63,7 @@
         }
 
         .nav-links a {
-            color: #333333; /* Màu chữ tối */
+            color: #FFFFFF;
             text-decoration: none;
             font-weight: 500;
             transition: all 0.3s ease;
@@ -72,8 +72,8 @@
         }
 
         .nav-links a:hover {
-            color: #83344A; /* Màu đỏ đậm */
-            background: rgba(131, 52, 74, 0.1); /* Màu đỏ đậm với độ trong suốt */
+            color: #DDDDDD;
+            background: rgba(149, 48, 25, 0.3); /* Màu đỏ đô nhạt */
         }
 
         /* Hiệu ứng sao lấp lánh */
@@ -85,14 +85,14 @@
             width: 100%;
             height: 100%;
             background: 
-                radial-gradient(2px 2px at 20px 30px, #83344A, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 40px 70px, #E8C3BA, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 90px 40px, #83344A, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 130px 80px, #E8C3BA, rgba(0,0,0,0));
+                radial-gradient(2px 2px at 20px 30px, #56368B, rgba(0,0,0,0)), /* Màu tím */
+                radial-gradient(2px 2px at 40px 70px, #3756A9, rgba(0,0,0,0)), /* Màu xanh dương */
+                radial-gradient(2px 2px at 90px 40px, #953019, rgba(0,0,0,0)), /* Màu đỏ đô */
+                radial-gradient(2px 2px at 130px 80px, #983C4E, rgba(0,0,0,0)); /* Màu đỏ hồng */
             background-size: 200px 200px;
             animation: stars 50s linear infinite;
             z-index: -1;
-            opacity: 0.3;
+            opacity: 0.6;
         }
 
         @keyframes stars {
@@ -103,14 +103,14 @@
         .container {
             max-width: 800px;
             margin: 100px auto 50px;
-            background: rgba(255, 255, 255, 0.9); /* Nền trắng trong suốt */
+            background: rgba(43, 35, 21, 0.85); /* Màu nâu đậm */
             padding: 30px;
             border-radius: 20px;
             box-shadow: 
-                0 0 25px rgba(131, 52, 74, 0.2), /* Màu đỏ đậm */
+                0 0 25px rgba(149, 48, 25, 0.5), /* Màu đỏ đô */
                 0 0 15px rgba(255, 255, 255, 0.1) inset;
             backdrop-filter: blur(8px);
-            border: 2px solid #83344A; /* Màu đỏ đậm */
+            border: 2px solid #953019; /* Viền đỏ đô */
             position: relative;
         }
 
@@ -128,9 +128,9 @@
             height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid #83344A; /* Màu đỏ đậm */
+            border: 3px solid #953019; /* Viền đỏ đô */
             box-shadow: 
-                0 0 15px rgba(131, 52, 74, 0.3),
+                0 0 15px rgba(149, 48, 25, 0.4), /* Màu đỏ đô */
                 0 0 0 5px rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
             flex-shrink: 0;
@@ -138,7 +138,7 @@
 
         .avatar:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(131, 52, 74, 0.4);
+            box-shadow: 0 0 20px rgba(149, 48, 25, 0.6); /* Màu đỏ đô */
         }
 
         .header-content {
@@ -146,36 +146,36 @@
         }
 
         h1 {
-            color: #83344A; /* Màu đỏ đậm */
+            color: #FFFFFF;
             margin: 10px 0;
             font-size: 28px;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
         }
 
         .tagline {
             font-style: italic;
-            color: #a04d60; /* Màu đỏ đậm nhạt hơn */
+            color: #DDDDDD;
             font-size: 18px;
         }
 
         section {
             margin-bottom: 25px;
             padding: 20px;
-            background: rgba(255, 255, 255, 0.8); /* Nền trắng trong suốt */
+            background: rgba(86, 54, 139, 0.3); /* Màu tím nhạt (#56368B) */
             border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border: 1px solid #E8C3BA; /* Màu hồng nhạt */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            border: 1px solid #3756A9; /* Viền xanh dương (#3756A9) */
             transition: all 0.3s ease;
         }
 
         section:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(131, 52, 74, 0.2); /* Màu đỏ đậm */
+            box-shadow: 0 8px 25px rgba(149, 48, 25, 0.3); /* Màu đỏ đô */
         }
 
         h2 {
-            color: #83344A; /* Màu đỏ đậm */
-            border-bottom: 2px dashed #E8C3BA; /* Màu hồng nhạt */
+            color: #FFFFFF;
+            border-bottom: 2px dashed #953019; /* Màu đỏ đô */
             padding-bottom: 8px;
             margin-bottom: 15px;
             font-size: 22px;
@@ -184,7 +184,7 @@
         p, li {
             margin-bottom: 10px;
             font-size: 16px;
-            color: #333333; /* Màu chữ tối */
+            color: #FFFFFF;
         }
 
         ul {
@@ -193,14 +193,14 @@
         }
 
         a {
-            color: #83344A; /* Màu đỏ đậm */
+            color: #DDDDDD;
             text-decoration: none;
             transition: all 0.3s ease;
             font-weight: 500;
         }
 
         a:hover {
-            color: #a04d60; /* Màu đỏ đậm nhạt hơn */
+            color: #FFFFFF;
             text-decoration: underline;
         }
 
@@ -213,19 +213,19 @@
 
         .social-links a {
             display: inline-block;
-            background: linear-gradient(45deg, #83344A, #a04d60); /* Đỏ đậm đến đỏ nhạt */
+            background: linear-gradient(45deg, #953019, #56368B); /* Đỏ đô sang tím */
             color: white;
             padding: 8px 20px;
             border-radius: 50px;
             font-size: 14px;
-            box-shadow: 0 3px 10px rgba(131, 52, 74, 0.3);
+            box-shadow: 0 3px 10px rgba(149, 48, 25, 0.3); /* Màu đỏ đô */
             transition: all 0.3s ease;
         }
 
         .social-links a:hover {
-            background: linear-gradient(45deg, #a04d60, #83344A);
+            background: linear-gradient(45deg, #56368B, #953019); /* Tím sang đỏ đô */
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(131, 52, 74, 0.4);
+            box-shadow: 0 5px 15px rgba(86, 54, 139, 0.4); /* Màu tím */
             text-decoration: none;
         }
 
@@ -237,10 +237,10 @@
         }
 
         .social-icons a {
-            color: #333333; /* Màu chữ tối */
+            color: #FFFFFF;
             font-size: 24px;
             transition: all 0.3s ease;
-            background: rgba(131, 52, 74, 0.1); /* Màu đỏ đậm */
+            background: rgba(149, 48, 25, 0.3); /* Màu đỏ đô nhạt */
             width: 40px;
             height: 40px;
             border-radius: 50%;
@@ -250,9 +250,9 @@
         }
 
         .social-icons a:hover {
-            color: white;
+            color: #DDDDDD;
             transform: translateY(-3px);
-            background: rgba(131, 52, 74, 0.3); /* Màu đỏ đậm */
+            background: rgba(86, 54, 139, 0.4); /* Màu tím */
         }
 
         /* Portfolio Gallery */
@@ -264,17 +264,17 @@
         }
         
         .artwork {
-            background: rgba(131, 52, 74, 0.1); /* Màu đỏ đậm */
+            background: rgba(55, 86, 169, 0.2); /* Màu xanh dương nhạt (#3756A9) */
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
             transition: all 0.3s ease;
-            border: 1px solid #E8C3BA; /* Màu hồng nhạt */
+            border: 1px solid #56368B; /* Viền tím (#56368B) */
         }
         
         .artwork:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(131, 52, 74, 0.2); /* Màu đỏ đậm */
+            box-shadow: 0 10px 25px rgba(149, 48, 25, 0.3); /* Màu đỏ đô */
         }
         
         .artwork-img {
@@ -282,7 +282,7 @@
             height: 180px;
             object-fit: cover;
             cursor: zoom-in;
-            border-bottom: 1px solid rgba(131, 52, 74, 0.2); /* Màu đỏ đậm */
+            border-bottom: 1px solid rgba(149, 48, 25, 0.3); /* Màu đỏ đô nhạt */
         }
         
         .artwork-info {
@@ -292,12 +292,12 @@
         
         .artwork-title {
             font-weight: 600;
-            color: #83344A; /* Màu đỏ đậm */
+            color: #DDDDDD;
             margin-bottom: 5px;
         }
         
         .artwork-desc {
-            color: #333333; /* Màu chữ tối */
+            color: #FFFFFF;
             font-size: 14px;
             line-height: 1.5;
         }
@@ -310,7 +310,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.95);
+            background: rgba(43, 35, 21, 0.95); /* Màu nâu đậm */
             z-index: 1000;
             justify-content: center;
             align-items: center;
@@ -326,7 +326,7 @@
         .lightbox-img {
             max-height: 80vh;
             max-width: 100%;
-            border: 3px solid #83344A; /* Màu đỏ đậm */
+            border: 3px solid #953019; /* Viền đỏ đô */
             border-radius: 5px;
         }
         
@@ -347,32 +347,32 @@
         }
         
         .close-btn:hover {
-            color: #E8C3BA; /* Màu hồng nhạt */
+            color: #AAAAAA;
             transform: scale(1.1);
         }
 
         /* Collaboration Section */
         .collab-section {
             margin-top: 40px;
-            background: rgba(255, 255, 255, 0.8); /* Nền trắng trong suốt */
+            background: rgba(86, 54, 139, 0.3); /* Màu tím nhạt */
             padding: 30px;
             border-radius: 15px;
-            border: 1px solid #83344A; /* Màu đỏ đậm */
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #3756A9; /* Viền xanh dương */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
         
         .collab-section h2 {
             text-align: center;
             font-size: 26px;
             margin-bottom: 20px;
-            color: #83344A; /* Màu đỏ đậm */
+            color: #FFFFFF;
         }
         
         .collab-section p.intro {
             text-align: center;
             font-size: 18px;
             margin-bottom: 30px;
-            color: #a04d60; /* Màu đỏ đậm nhạt hơn */
+            color: #DDDDDD;
         }
         
         .contact-grid {
@@ -382,11 +382,11 @@
         }
         
         .contact-info h3, .contact-form h3 {
-            color: #83344A; /* Màu đỏ đậm */
+            color: #DDDDDD;
             font-size: 22px;
             margin-bottom: 20px;
             padding-bottom: 10px;
-            border-bottom: 2px dashed #E8C3BA; /* Màu hồng nhạt */
+            border-bottom: 2px dashed #953019; /* Màu đỏ đô */
         }
         
         .contact-item {
@@ -394,37 +394,37 @@
         }
         
         .contact-item h4 {
-            color: #333333; /* Màu chữ tối */
+            color: #FFFFFF;
             margin-bottom: 8px;
             font-size: 18px;
         }
         
         .contact-item p, .contact-item a {
-            color: #333333; /* Màu chữ tối */
+            color: #FFFFFF;
             font-size: 16px;
         }
         
         .availability {
-            background: rgba(131, 52, 74, 0.1); /* Màu đỏ đậm */
+            background: rgba(149, 48, 25, 0.1); /* Màu đỏ đô nhạt */
             padding: 15px;
             border-radius: 10px;
-            border-left: 3px solid #E8C3BA; /* Màu hồng nhạt */
+            border-left: 3px solid #953019; /* Màu đỏ đô */
             margin-top: 20px;
         }
         
         /* Contact Form Section */
         .contact-form-section {
             margin-top: 40px;
-            background: rgba(255, 255, 255, 0.8); /* Nền trắng trong suốt */
+            background: rgba(55, 86, 169, 0.2); /* Màu xanh dương nhạt */
             padding: 30px;
             border-radius: 15px;
-            border: 1px solid #83344A; /* Màu đỏ đậm */
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #56368B; /* Viền tím */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
         
         .contact-form-section h2 {
             text-align: center;
-            color: #83344A; /* Màu đỏ đậm */
+            color: #FFFFFF;
             margin-bottom: 20px;
             font-size: 26px;
         }
@@ -435,23 +435,23 @@
         
         .form-group label {
             display: block;
-            color: #83344A; /* Màu đỏ đậm */
+            color: #FFFFFF;
             margin-bottom: 8px;
         }
         
         .form-control {
             width: 100%;
             padding: 12px;
-            background: rgba(255,255,255,0.9);
-            border: 1px solid rgba(131, 52, 74, 0.3); /* Màu đỏ đậm */
-            color: #333333; /* Màu chữ tối */
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(149, 48, 25, 0.3); /* Màu đỏ đô nhạt */
+            color: #FFFFFF;
             border-radius: 5px;
             transition: all 0.3s ease;
         }
         
         .form-control:focus {
-            border-color: #83344A; /* Màu đỏ đậm */
-            box-shadow: 0 0 10px rgba(131, 52, 74, 0.2);
+            border-color: #953019; /* Màu đỏ đô */
+            box-shadow: 0 0 10px rgba(149, 48, 25, 0.3); /* Màu đỏ đô */
             outline: none;
         }
         
@@ -471,12 +471,12 @@
         }
         
         .checkbox-group label {
-            color: #333333; /* Màu chữ tối */
+            color: #FFFFFF;
             font-size: 14px;
         }
         
         .submit-btn {
-            background: linear-gradient(45deg, #83344A, #a04d60); /* Đỏ đậm đến đỏ nhạt */
+            background: linear-gradient(45deg, #953019, #56368B); /* Đỏ đô sang tím */
             color: white;
             padding: 12px 30px;
             border: none;
@@ -491,9 +491,9 @@
         }
         
         .submit-btn:hover {
-            background: linear-gradient(45deg, #a04d60, #83344A);
+            background: linear-gradient(45deg, #56368B, #953019); /* Tím sang đỏ đô */
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(131, 52, 74, 0.3);
+            box-shadow: 0 5px 15px rgba(86, 54, 139, 0.4); /* Màu tím */
         }
 
         /* Skills Section Enhancements */
@@ -502,10 +502,10 @@
         }
         
         .skills-details h3 {
-            color: #83344A; /* Màu đỏ đậm */
+            color: #FFFFFF;
             margin: 25px 0 15px;
             font-size: 20px;
-            border-bottom: 1px dashed #E8C3BA; /* Màu hồng nhạt */
+            border-bottom: 1px dashed #953019; /* Màu đỏ đô */
             padding-bottom: 5px;
         }
         
@@ -518,14 +518,14 @@
         
         .skill-name {
             width: 200px;
-            color: #333333; /* Màu chữ tối */
+            color: #FFFFFF;
             font-weight: 500;
         }
         
         .skill-bar {
             flex-grow: 1;
             height: 10px;
-            background: rgba(131, 52, 74, 0.2); /* Màu đỏ đậm */
+            background: rgba(149, 48, 25, 0.2); /* Màu đỏ đô nhạt */
             border-radius: 5px;
             margin: 0 15px;
             overflow: hidden;
@@ -533,13 +533,13 @@
         
         .skill-level {
             height: 100%;
-            background: linear-gradient(90deg, #83344A, #a04d60); /* Đỏ đậm đến đỏ nhạt */
+            background: linear-gradient(90deg, #953019, #56368B); /* Đỏ đô sang tím */
             border-radius: 5px;
             transition: width 1s ease-in-out;
         }
         
         .skill-percent {
-            color: #83344A; /* Màu đỏ đậm */
+            color: #DDDDDD;
             font-weight: bold;
             width: 40px;
             text-align: right;
@@ -558,14 +558,14 @@
         }
         
         .software-item span {
-            color: #333333; /* Màu chữ tối */
+            color: #FFFFFF;
             position: relative;
             padding-left: 20px;
         }
         
         .software-item span::before {
             content: "•";
-            color: #83344A; /* Màu đỏ đậm */
+            color: #953019; /* Màu đỏ đô */
             position: absolute;
             left: 0;
         }
@@ -573,7 +573,7 @@
         .experience-item {
             margin-bottom: 25px;
             padding-bottom: 25px;
-            border-bottom: 1px solid rgba(131, 52, 74, 0.2); /* Màu đỏ đậm */
+            border-bottom: 1px solid rgba(149, 48, 25, 0.3); /* Màu đỏ đô nhạt */
         }
         
         .experience-item:last-child {
@@ -581,26 +581,26 @@
         }
         
         .experience-item h4 {
-            color: #83344A; /* Màu đỏ đậm */
+            color: #FFFFFF;
             margin-bottom: 5px;
             font-size: 18px;
         }
         
         .company {
-            color: #a04d60; /* Màu đỏ đậm nhạt hơn */
+            color: #DDDDDD;
             font-weight: 500;
             margin-bottom: 5px;
         }
         
         .duration {
-            color: #333333; /* Màu chữ tối */
+            color: #FFFFFF;
             font-size: 14px;
             margin-bottom: 10px;
             font-style: italic;
         }
         
         .description {
-            color: #333333; /* Màu chữ tối */
+            color: #FFFFFF;
             line-height: 1.6;
         }
         
@@ -931,4 +931,38 @@
                 
                 <div class="form-group">
                     <label for="message">Nội Dung</label>
-                    <textarea id="message" class="form-control"
+                    <textarea id="message" class="form-control" placeholder="Hãy cho tôi biết về dự án của bạn..." required></textarea>
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="privacy" required>
+                    <label for="privacy">Tôi đồng ý với chính sách bảo mật và cho phép dữ liệu của tôi được xử lý cho liên hệ mục tiêu.</label>
+                </div>
+                
+                <button type="submit" class="submit-btn">Gửi tin nhắn</button>
+            </form>
+        </section>
+    </div>
+
+    <script>
+        function openLightbox(imgSrc, imgAlt) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            
+            lightbox.style.display = 'flex';
+            lightboxImg.src = imgSrc;
+            lightboxCaption.textContent = imgAlt;
+            
+            event.stopPropagation();
+        }
+        
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+        
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeLightbox();
+            }
+       
