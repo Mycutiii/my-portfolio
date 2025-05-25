@@ -17,23 +17,23 @@
         body {
             font-family: 'Playfair Display', serif;
             line-height: 1.6;
-            color: #FFFFFF;
+            color: #FFFFFF; /* Chữ màu trắng */
             padding: 20px;
-            background-color: #2B2315; /* Màu nền chính đổi thành màu nâu đậm (#2B2315) */
+            background-color: #333333; /* Nền ngoài màu xám đậm */
             min-height: 100vh;
             position: relative;
         }
 
         /* Navigation Header */
         .main-header {
-            background: rgba(43, 35, 21, 0.95); /* Màu nâu đậm */
+            background: rgba(25, 25, 25, 0.95); /* Màu đen */
             box-shadow: 0 2px 10px rgba(0,0,0,0.3);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
             backdrop-filter: blur(8px);
-            border-bottom: 1px solid #953019; /* Viền đỏ đô */
+            border-bottom: 1px solid #555555;
         }
 
         .main-nav {
@@ -73,7 +73,7 @@
 
         .nav-links a:hover {
             color: #DDDDDD;
-            background: rgba(149, 48, 25, 0.3); /* Màu đỏ đô nhạt */
+            background: rgba(255, 255, 255, 0.1);
         }
 
         /* Hiệu ứng sao lấp lánh */
@@ -85,10 +85,10 @@
             width: 100%;
             height: 100%;
             background: 
-                radial-gradient(2px 2px at 20px 30px, #56368B, rgba(0,0,0,0)), /* Màu tím */
-                radial-gradient(2px 2px at 40px 70px, #3756A9, rgba(0,0,0,0)), /* Màu xanh dương */
-                radial-gradient(2px 2px at 90px 40px, #953019, rgba(0,0,0,0)), /* Màu đỏ đô */
-                radial-gradient(2px 2px at 130px 80px, #983C4E, rgba(0,0,0,0)); /* Màu đỏ hồng */
+                radial-gradient(2px 2px at 20px 30px, #555555, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 40px 70px, #777777, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 90px 40px, #555555, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 130px 80px, #777777, rgba(0,0,0,0));
             background-size: 200px 200px;
             animation: stars 50s linear infinite;
             z-index: -1;
@@ -103,14 +103,14 @@
         .container {
             max-width: 800px;
             margin: 100px auto 50px;
-            background: rgba(43, 35, 21, 0.85); /* Màu nâu đậm */
+            background: rgba(25, 25, 25, 0.85); /* Khung giới thiệu màu đen */
             padding: 30px;
             border-radius: 20px;
             box-shadow: 
-                0 0 25px rgba(149, 48, 25, 0.5), /* Màu đỏ đô */
+                0 0 25px rgba(50, 50, 50, 0.5),
                 0 0 15px rgba(255, 255, 255, 0.1) inset;
             backdrop-filter: blur(8px);
-            border: 2px solid #953019; /* Viền đỏ đô */
+            border: 2px solid #555555;
             position: relative;
         }
 
@@ -128,9 +128,9 @@
             height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid #953019; /* Viền đỏ đô */
+            border: 3px solid #777777;
             box-shadow: 
-                0 0 15px rgba(149, 48, 25, 0.4), /* Màu đỏ đô */
+                0 0 15px rgba(170, 170, 170, 0.4),
                 0 0 0 5px rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
             flex-shrink: 0;
@@ -138,7 +138,7 @@
 
         .avatar:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(149, 48, 25, 0.6); /* Màu đỏ đô */
+            box-shadow: 0 0 20px rgba(170, 170, 170, 0.6);
         }
 
         .header-content {
@@ -161,21 +161,21 @@
         section {
             margin-bottom: 25px;
             padding: 20px;
-            background: rgba(86, 54, 139, 0.3); /* Màu tím nhạt (#56368B) */
+            background: rgba(40, 40, 40, 0.7); /* Màu đen nhạt */
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            border: 1px solid #3756A9; /* Viền xanh dương (#3756A9) */
+            border: 1px solid #555555;
             transition: all 0.3s ease;
         }
 
         section:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(149, 48, 25, 0.3); /* Màu đỏ đô */
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
         }
 
         h2 {
             color: #FFFFFF;
-            border-bottom: 2px dashed #953019; /* Màu đỏ đô */
+            border-bottom: 2px dashed #777777;
             padding-bottom: 8px;
             margin-bottom: 15px;
             font-size: 22px;
@@ -213,19 +213,19 @@
 
         .social-links a {
             display: inline-block;
-            background: linear-gradient(45deg, #953019, #56368B); /* Đỏ đô sang tím */
+            background: linear-gradient(45deg, #555555, #333333);
             color: white;
             padding: 8px 20px;
             border-radius: 50px;
             font-size: 14px;
-            box-shadow: 0 3px 10px rgba(149, 48, 25, 0.3); /* Màu đỏ đô */
+            box-shadow: 0 3px 10px rgba(85, 85, 85, 0.3);
             transition: all 0.3s ease;
         }
 
         .social-links a:hover {
-            background: linear-gradient(45deg, #56368B, #953019); /* Tím sang đỏ đô */
+            background: linear-gradient(45deg, #333333, #555555);
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(86, 54, 139, 0.4); /* Màu tím */
+            box-shadow: 0 5px 15px rgba(85, 85, 85, 0.4);
             text-decoration: none;
         }
 
@@ -240,7 +240,7 @@
             color: #FFFFFF;
             font-size: 24px;
             transition: all 0.3s ease;
-            background: rgba(149, 48, 25, 0.3); /* Màu đỏ đô nhạt */
+            background: rgba(255,255,255,0.1);
             width: 40px;
             height: 40px;
             border-radius: 50%;
@@ -252,7 +252,7 @@
         .social-icons a:hover {
             color: #DDDDDD;
             transform: translateY(-3px);
-            background: rgba(86, 54, 139, 0.4); /* Màu tím */
+            background: rgba(170, 170, 170, 0.2);
         }
 
         /* Portfolio Gallery */
@@ -264,17 +264,17 @@
         }
         
         .artwork {
-            background: rgba(55, 86, 169, 0.2); /* Màu xanh dương nhạt (#3756A9) */
+            background: rgba(85, 85, 85, 0.2);
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
             transition: all 0.3s ease;
-            border: 1px solid #56368B; /* Viền tím (#56368B) */
+            border: 1px solid #555555;
         }
         
         .artwork:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(149, 48, 25, 0.3); /* Màu đỏ đô */
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
         }
         
         .artwork-img {
@@ -282,7 +282,7 @@
             height: 180px;
             object-fit: cover;
             cursor: zoom-in;
-            border-bottom: 1px solid rgba(149, 48, 25, 0.3); /* Màu đỏ đô nhạt */
+            border-bottom: 1px solid rgba(170, 170, 170, 0.3);
         }
         
         .artwork-info {
@@ -310,7 +310,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(43, 35, 21, 0.95); /* Màu nâu đậm */
+            background: rgba(0, 0, 0, 0.95);
             z-index: 1000;
             justify-content: center;
             align-items: center;
@@ -326,7 +326,7 @@
         .lightbox-img {
             max-height: 80vh;
             max-width: 100%;
-            border: 3px solid #953019; /* Viền đỏ đô */
+            border: 3px solid #555555;
             border-radius: 5px;
         }
         
@@ -354,10 +354,10 @@
         /* Collaboration Section */
         .collab-section {
             margin-top: 40px;
-            background: rgba(86, 54, 139, 0.3); /* Màu tím nhạt */
+            background: rgba(40, 40, 40, 0.7);
             padding: 30px;
             border-radius: 15px;
-            border: 1px solid #3756A9; /* Viền xanh dương */
+            border: 1px solid #555555;
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
         
@@ -386,7 +386,7 @@
             font-size: 22px;
             margin-bottom: 20px;
             padding-bottom: 10px;
-            border-bottom: 2px dashed #953019; /* Màu đỏ đô */
+            border-bottom: 2px dashed #777777;
         }
         
         .contact-item {
@@ -405,20 +405,20 @@
         }
         
         .availability {
-            background: rgba(149, 48, 25, 0.1); /* Màu đỏ đô nhạt */
+            background: rgba(170, 170, 170, 0.1);
             padding: 15px;
             border-radius: 10px;
-            border-left: 3px solid #953019; /* Màu đỏ đô */
+            border-left: 3px solid #555555;
             margin-top: 20px;
         }
         
         /* Contact Form Section */
         .contact-form-section {
             margin-top: 40px;
-            background: rgba(55, 86, 169, 0.2); /* Màu xanh dương nhạt */
+            background: rgba(40, 40, 40, 0.7);
             padding: 30px;
             border-radius: 15px;
-            border: 1px solid #56368B; /* Viền tím */
+            border: 1px solid #555555;
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
         
@@ -443,15 +443,15 @@
             width: 100%;
             padding: 12px;
             background: rgba(255,255,255,0.1);
-            border: 1px solid rgba(149, 48, 25, 0.3); /* Màu đỏ đô nhạt */
+            border: 1px solid rgba(170, 170, 170, 0.3);
             color: #FFFFFF;
             border-radius: 5px;
             transition: all 0.3s ease;
         }
         
         .form-control:focus {
-            border-color: #953019; /* Màu đỏ đô */
-            box-shadow: 0 0 10px rgba(149, 48, 25, 0.3); /* Màu đỏ đô */
+            border-color: #777777;
+            box-shadow: 0 0 10px rgba(170, 170, 170, 0.3);
             outline: none;
         }
         
@@ -476,7 +476,7 @@
         }
         
         .submit-btn {
-            background: linear-gradient(45deg, #953019, #56368B); /* Đỏ đô sang tím */
+            background: linear-gradient(45deg, #555555, #333333);
             color: white;
             padding: 12px 30px;
             border: none;
@@ -491,9 +491,9 @@
         }
         
         .submit-btn:hover {
-            background: linear-gradient(45deg, #56368B, #953019); /* Tím sang đỏ đô */
+            background: linear-gradient(45deg, #333333, #555555);
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(86, 54, 139, 0.4); /* Màu tím */
+            box-shadow: 0 5px 15px rgba(85, 85, 85, 0.4);
         }
 
         /* Skills Section Enhancements */
@@ -505,7 +505,7 @@
             color: #FFFFFF;
             margin: 25px 0 15px;
             font-size: 20px;
-            border-bottom: 1px dashed #953019; /* Màu đỏ đô */
+            border-bottom: 1px dashed #777777;
             padding-bottom: 5px;
         }
         
@@ -525,7 +525,7 @@
         .skill-bar {
             flex-grow: 1;
             height: 10px;
-            background: rgba(149, 48, 25, 0.2); /* Màu đỏ đô nhạt */
+            background: rgba(170, 170, 170, 0.2);
             border-radius: 5px;
             margin: 0 15px;
             overflow: hidden;
@@ -533,7 +533,7 @@
         
         .skill-level {
             height: 100%;
-            background: linear-gradient(90deg, #953019, #56368B); /* Đỏ đô sang tím */
+            background: linear-gradient(90deg, #555555, #333333);
             border-radius: 5px;
             transition: width 1s ease-in-out;
         }
@@ -565,7 +565,7 @@
         
         .software-item span::before {
             content: "•";
-            color: #953019; /* Màu đỏ đô */
+            color: #777777;
             position: absolute;
             left: 0;
         }
@@ -573,7 +573,7 @@
         .experience-item {
             margin-bottom: 25px;
             padding-bottom: 25px;
-            border-bottom: 1px solid rgba(149, 48, 25, 0.3); /* Màu đỏ đô nhạt */
+            border-bottom: 1px solid rgba(170, 170, 170, 0.3);
         }
         
         .experience-item:last-child {
@@ -965,4 +965,29 @@
             if (event.key === 'Escape') {
                 closeLightbox();
             }
-       
+        });
+
+        // Thêm smooth scrolling cho navigation
+        document.querySelectorAll('.nav-links a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#home') {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
